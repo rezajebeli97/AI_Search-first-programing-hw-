@@ -1,25 +1,19 @@
-public class State {
+public abstract class State {
 	public State parentState;
 	public Action parentAction;
-	private int x,y;
-	public State(int x , int y) {
-
-		this.setX(x);
-		this.setY(y);
+	private double g;
+	private int depth;
+	public abstract String print();
+	public double getG() {
+		return g;
 	}
-	public int getX() {
-		return x;
+	public void setG(double g) {
+		this.g = g;
 	}
-	public void setX(int x) {
-		this.x = x;
+	public int getDepth() {
+		return depth;
 	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public String print() {
-		return "( " + getX() + " , " + getY() + " )" ;
+	public void setDepth(int depth) {
+		this.depth = depth;
 	}
 }

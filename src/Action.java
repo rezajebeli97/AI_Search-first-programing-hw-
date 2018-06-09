@@ -1,14 +1,4 @@
-
-public class Action {
-
-	public char name;
-	
-	public String print() {
-		return name + "";
-	}
-	
-	public Action(char name) {
-		this.name = name;
-	}
-	
+public abstract class Action {
+	public int cost = 0;
+	public abstract String print();
 }

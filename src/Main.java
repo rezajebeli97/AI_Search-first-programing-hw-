@@ -1,7 +1,7 @@
 public class Main {
 	public static void main(String[] args) {
-		Problem problem = new Problem();
-		Search s = new Search();
-		s.bfs_graph(problem);
+		 Problem3 problem = new Problem3();
+		 Search s = new Search();
+		 s.bfs(problem);
 	}
 }
