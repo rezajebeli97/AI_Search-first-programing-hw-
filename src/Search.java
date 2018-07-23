@@ -15,6 +15,7 @@ public class Search {
 		while (!f.isEmpty()) {
 			State p = f.remove(0);
 			e.add(p);
+			System.out.println(p.print() + " : removed from f array and added to e array(expand p)") ;
 			for (Action action : problem.actions(p)) {
 				State child = problem.result(p, action);
 				child.parentAction = action;
@@ -26,7 +27,9 @@ public class Search {
 						eContainsChild = true;
 				}
 				if (!eContainsChild) {
+					System.out.println("check goal test for state : " + child.print());
 					if (problem.goalTest(child)) {
+						System.out.println("found final node!");
 						printDetails(problem, child, f, e, 0, 0);
 						return;
 					}
@@ -37,6 +40,7 @@ public class Search {
 					}
 					if (!fContainsChild) {
 						f.add(child);
+						System.out.println(child.print() + " : added to f array") ;
 					}
 				}
 			}

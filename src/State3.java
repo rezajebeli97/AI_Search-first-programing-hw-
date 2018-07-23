@@ -27,5 +27,4 @@ public class State3 extends State{
 	public void setRubik(char c , int i) {
 		this.rubik[i] = c;
 	}
-
 }
